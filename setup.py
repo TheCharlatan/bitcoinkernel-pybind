@@ -10,13 +10,8 @@ ext_modules = [
         include_dirs=[
             "bitcoin/src"
         ],
-        define_macros=[
-            ('HAVE_CONFIG_H', '1'),
-            ('DEBUG', '1'),
-        ],
         undef_macros=[
-            'NDEBUG',
-            'WAIT_LOCK'
+            'NDEBUG'
         ],
         library_dirs=[
             "bitcoin/build/lib"
