@@ -11,6 +11,7 @@ PYBIND11_MODULE(bitcoinkernel, m) {
 
     // Expose key classes and functions
     m.def("MainNetParams", CChainParams::Main);
+    m.def("TestNetParams", CChainParams::TestNet);
 
     // Expose other key classes like BlockValidationState
     py::class_<BlockValidationState>(m, "BlockValidationState")
