@@ -8,7 +8,6 @@ ext_modules = [
         'bitcoinkernel',
         ['src/bindings.cpp'],
         include_dirs=[
-            # Path to pybind11 headers
             "bitcoin/src"
         ],
         define_macros=[
@@ -42,7 +41,7 @@ class BuildExt(build_ext):
     }
 
     if sys.platform == 'darwin':
-        darwin_opts = ['-stdlib=libc++', '-mmacosx-version-min=10.14']
+        darwin_opts = ['-stdlib=libc++']
         c_opts['unix'] += darwin_opts
         l_opts['unix'] += darwin_opts
 
